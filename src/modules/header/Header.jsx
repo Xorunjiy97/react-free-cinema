@@ -10,13 +10,15 @@ const Header = () =>{
         <ul className='header__page-container'>
             <li>
                 <Link to={'/'} 
-                      className='header__home'> Home </Link>
+                      className='header__home list'> Home </Link>
             </li>
             <li >
-                <Link to={'/about'} className='header__about' > About Us</Link> 
+                <Link to={'/about'} 
+                      className='header__about list' > About Us</Link> 
             </li>   
-            <li className='header__rating'> 
-                <Link to={'/raiting'} > Raiting </Link> 
+            <li> 
+                <Link to={'/raiting'} 
+                      className='header__rating list' > Raiting </Link> 
             </li>
         </ul>
     </div>

@@ -1,10 +1,18 @@
 import React,{useState,useEffect} from 'react';
 import * as api from '../../REST';
-import RaitingCard from './components/RaitnigCard'
+import RaitingCard from './components/RaitnigCard';
 
 const Raiting = (props) => {
-    const [movies, setMovies] = useState([]);
+    const {
+        saveCardsData,
+        saveCard,
+    } = props;
 
+    // saveCardsData(api.getRate()).
+    // console.log(api.getRate().films)
+
+    const [movies, setMovies] = useState([]);
+    console.log(props)
     useEffect(async () => { //
         const films = api.getRate(); //componentDidMount - когда срендерился(отрисовался) компонент
         setMovies(await films);
@@ -12,19 +20,14 @@ const Raiting = (props) => {
         return () => { //componentWillUnmount - когда кмопонент удалился из вёрстки
             setMovies([]);
         };
-    }, []);
-
-    const {
-        saveCardsData
-    } = props;
-    console.log(saveCardsData);
+    }, []);   
     
-
+    console.log(movies)
     return(
         <div>
                 {
-                
-                saveCardsData.map((movie, index) =>
+                movies.length ?
+                movies.map((movie, index) =>
                     <RaitingCard
                             key={index}
                             id={movie.filmId}
@@ -35,7 +38,7 @@ const Raiting = (props) => {
                             
                         />
                     )
-               
+                : null
             }
                   
 

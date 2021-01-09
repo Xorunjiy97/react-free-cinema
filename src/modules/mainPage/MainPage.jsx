@@ -3,7 +3,7 @@ import './mainPageStyles.less'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from '../aboutPage/AboutPage';
 import Header from '../header/Header';
-import Raiting from '../ratingPage/RatingPage'
+import Raiting from '../ratingPage'
 
 
 const MainPage = () => {

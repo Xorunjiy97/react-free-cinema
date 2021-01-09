@@ -1,4 +1,4 @@
-import Component from './RatingPage';
+import Component from './RatingPage.jsx';
 import * as selectors from './selectors';
 import * as actions from './actions';
 import { connect } from "react-redux";
@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
     saveCard: selectors.getSaveCard(state),
 });
 const mapDispatchToProps = dispatch => ({
-    saveCardsData: payload => dispatch(actions.saveCardsData(payload)),
+    saveCardsData: data => dispatch(actions.saveCardData(data)),
 });
 
 
