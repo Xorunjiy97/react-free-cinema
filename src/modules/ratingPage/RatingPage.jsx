@@ -8,16 +8,14 @@ const Raiting = (props) => {
         saveCard,
     } = props;
 
-    // saveCardsData(api.getRate()).
-    // console.log(api.getRate().films)
 
     const [movies, setMovies] = useState([]);
     console.log(props)
-    useEffect(async () => { //
-        const films = api.getRate(); //componentDidMount - когда срендерился(отрисовался) компонент
+    useEffect(async () => { 
+        const films = api.getRate();
         setMovies(await films);
 
-        return () => { //componentWillUnmount - когда кмопонент удалился из вёрстки
+        return () => { 
             setMovies([]);
         };
     }, []);   
@@ -34,9 +32,8 @@ const Raiting = (props) => {
                             names={movie.nameEn}
                             years={movie.year}
                             images={movie.posterUrl}
-                            ratings={movie.rating}
-                            
-                        />
+                            ratings={movie.rating}                            
+                    />
                     )
                 : null
             }

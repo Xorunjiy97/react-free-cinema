@@ -1,0 +1,49 @@
+.movie {
+    width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card__image {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 2px solid black;
+    margin-left: 420px;
+    border-radius: 5%;
+}
+
+.film__name {
+    font-size: 40px;
+    text-align: center;
+    margin: 5px;
+}
+
+.film__rating {
+    font-size: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.film__year {
+    margin: 30px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: "East Sea Dokdo", cursive;
+  }
+  
+.remove__btn {  
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    margin-left: 780px;
+    z-index: 1;
+    background-color: rgb(14, 230, 212);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}

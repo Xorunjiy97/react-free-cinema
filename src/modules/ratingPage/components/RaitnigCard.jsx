@@ -1,5 +1,5 @@
 import React from "react";
-
+import './raitingCards.css';
 
 const RaitingCard = props => {
     
@@ -17,9 +17,11 @@ const RaitingCard = props => {
                 <div className='movie__card'>
                   <p className="film__name">{props.names}</p>
                   <p className="film__rating">{props.ratings}</p>
-                  <button className='remove__btn'
-                          onClick={handleRemove}>
-                              X</button>
+                  <button
+                      onClick={handleRemove}
+                      children='X'
+                      className='remove__btn'
+                  />                  
                   <img className="card__image" src={props.images}/>
                   <p className="film__year">{props.years}</p>
                 </div>
