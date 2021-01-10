@@ -1,0 +1,25 @@
+.root__header{
+    background: #4b4242;
+    color:antiquewhite;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__page-container{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+
+.list{
+    color:antiquewhite;
+    text-decoration:none
+}
+
+
