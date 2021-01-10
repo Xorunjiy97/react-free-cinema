@@ -13,20 +13,20 @@
     border-radius: 5%;
 }
 
-.film__name {
+.card__name {
     font-size: 40px;
     text-align: center;
     margin: 5px;
 }
 
-.film__rating {
+.card__rating {
     font-size: 40px;
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
 }
 
-.film__year {
+.card__year {
     margin: 30px;
     font-size: 40px;
     display: flex;
@@ -34,7 +34,7 @@
     font-family: "East Sea Dokdo", cursive;
   }
   
-.remove__btn {  
+.card_remove-btn {  
     width: 45px;
     height: 45px;
     position: absolute;
@@ -45,5 +45,5 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-
+    outline: none;
 }

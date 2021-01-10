@@ -1,26 +1,33 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect,useReducer,} from 'react';
 import * as api from '../../REST';
 import RaitingCard from './components/RaitnigCard';
-
-const Raiting = (props) => {
-    const {
-        saveCardsData,
-        saveCard,
-    } = props;
+import { initialState, reducer } from "../../manager/readedManager/reducer";
+import constants from '../../constants/constants';
 
 
-    const [movies, setMovies] = useState([]);
-    console.log(props)
-    useEffect(async () => { 
-        const films = api.getRate();
-        setMovies(await films);
+const Raiting = () => {
+    const [state, dispatch] = useReducer(reducer, initialState);
 
-        return () => { 
-            setMovies([]);
-        };
-    }, []);   
+  
+    useEffect(() => {
+      api.getRate().then(res => {
+        dispatch({
+          type: constants.SAVE_CARDS,
+          payload: res.films
+        });
+      });
+    }, []);
     
+    
+    const { movies } = state;
     console.log(movies)
+    
+    const handleRemove = (filmId) => {
+      dispatch({
+        type: constants.REMOVE_CARD,
+        payload: filmId
+      })
+    }
     return(
         <div>
                 {
@@ -32,7 +39,8 @@ const Raiting = (props) => {
                             names={movie.nameEn}
                             years={movie.year}
                             images={movie.posterUrl}
-                            ratings={movie.rating}                            
+                            ratings={movie.rating} 
+                            onRemove={handleRemove}                           
                     />
                     )
                 : null

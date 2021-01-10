@@ -1,9 +1,7 @@
 const token = 'cd6faaba-f134-48c6-a148-984768a48500'
 
 export const getRate = async () => {
-    let movies = [];
-
-    await fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1',
+    return await fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1',
     {
         method: 'GET',
         headers: {
@@ -11,8 +9,6 @@ export const getRate = async () => {
             'X-API-KEY': token,
         }
     }).then(response => response.json())
-      .then(response => movies = response.films)
-      .catch(error => console.log('error------>', error));
-      
-    return movies;
+     
+      .catch(error => console.log('error------>', error));      
 }

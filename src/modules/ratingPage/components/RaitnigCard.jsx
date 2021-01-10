@@ -3,27 +3,19 @@ import './raitingCards.css';
 
 const RaitingCard = props => {
     
-    const handleRemove = () => {
-      
-       
-    }
-    
-    
-    
-   
 
     return(
               <div className="movie">
                 <div className='movie__card'>
-                  <p className="film__name">{props.names}</p>
-                  <p className="film__rating">{props.ratings}</p>
+                  <p className="card__name">{props.names}</p>
+                  <p className="card__rating">{props.ratings}</p>
                   <button
-                      onClick={handleRemove}
+                      onClick={() => props.onRemove(props.id)}
                       children='X'
-                      className='remove__btn'
+                      className='card_remove-btn'
                   />                  
                   <img className="card__image" src={props.images}/>
-                  <p className="film__year">{props.years}</p>
+                  <p className="card__year">{props.years}</p>
                 </div>
               </div>
     )
