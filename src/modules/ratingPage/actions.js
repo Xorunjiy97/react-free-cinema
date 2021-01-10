@@ -1,6 +1,6 @@
-import constants from '../../constants/constants';
+// import constants from '../../constants/constants';
 
-export const saveCardData =  data => ({
-      type: constants.SAVE_CARDS,
-      payload: data ,
-});
+// export const saveCardData =  data => ({
+//       type: constants.SAVE_CARDS,
+//       payload: data ,
+// });
