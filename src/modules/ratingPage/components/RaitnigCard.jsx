@@ -9,12 +9,14 @@ const RaitingCard = props => {
                 <div className='movie__card'>
                   <p className="card__name">{props.names}</p>
                   <p className="card__rating">{props.ratings}</p>
-                  <button
-                      onClick={() => props.onRemove(props.id)}
-                      children='X'
-                      className='card_remove-btn'
-                  />                  
-                  <img className="card__image" src={props.images}/>
+                  <div className="card__wrapper-image">
+                        <button
+                            onClick={() => props.onRemove(props.id)}
+                            children='X'
+                            className='card_remove-btn'
+                        />
+                        <img className="card__image" src={props.images}/>
+                  </div> 
                   <p className="card__year">{props.years}</p>
                 </div>
               </div>

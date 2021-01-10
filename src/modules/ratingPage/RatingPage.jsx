@@ -27,6 +27,7 @@ const Raiting = () => {
         type: constants.REMOVE_CARD,
         payload: filmId
       })
+      
     }
     return(
         <div>
@@ -36,7 +37,7 @@ const Raiting = () => {
                     <RaitingCard
                             key={index}
                             id={movie.filmId}
-                            names={movie.nameEn}
+                            names={movie.nameRu}
                             years={movie.year}
                             images={movie.posterUrl}
                             ratings={movie.rating} 

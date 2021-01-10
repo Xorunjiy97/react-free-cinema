@@ -1,14 +1,14 @@
-import Component from './RatingPage.jsx';
-import * as selectors from './selectors';
-import * as actions from './actions';
-import { connect } from "react-redux";
+// import Component from './RatingPage.jsx';
+// import * as selectors from './selectors';
+// import * as actions from './actions';
+// import { connect } from "react-redux";
 
-const mapStateToProps = state => ({
-    saveCard: selectors.getSaveCard(state),
-});
-const mapDispatchToProps = dispatch => ({
-    saveCardsData: data => dispatch(actions.saveCardData(data)),
-});
+// const mapStateToProps = state => ({
+//     saveCard: selectors.getSaveCard(state),
+// });
+// const mapDispatchToProps = dispatch => ({
+//     saveCardsData: data => dispatch(actions.saveCardData(data)),
+// });
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Component);
+// export default connect(mapStateToProps,mapDispatchToProps)(Component);

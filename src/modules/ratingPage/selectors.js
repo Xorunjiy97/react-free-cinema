@@ -1,1 +1,1 @@
-export const getSaveCard = state => state.saveCard.saveCardData;
+// export const getSaveCard = state => state.saveCard.saveCardData;
