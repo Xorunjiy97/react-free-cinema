@@ -1,6 +1,6 @@
 import React from 'react';
 import './mainPageStyles.less'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from '../homePage/HomePage.jsx';
 import About from '../aboutPage/AboutPage';
 import Header from '../header/Header';
