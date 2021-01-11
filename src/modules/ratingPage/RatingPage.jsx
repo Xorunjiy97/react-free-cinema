@@ -10,7 +10,7 @@ const Raiting = () => {
 
   
     useEffect(() => {
-      api.getRate().then(res => {
+      api.getRate().then(res =>{
         dispatch({
           type: constants.SAVE_CARDS,
           payload: res.films
