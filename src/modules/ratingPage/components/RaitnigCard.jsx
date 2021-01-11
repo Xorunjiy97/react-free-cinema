@@ -22,4 +22,4 @@ const RaitingCard = props => {
     )         
 }
 
-export default RaitingCard;
+export default React.memo(RaitingCard);
